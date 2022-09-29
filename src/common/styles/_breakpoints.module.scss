@@ -1,0 +1,106 @@
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Custom, iPhone Retina
+$screen-xxs: 320px !default;
+$screen-xxs-min: $screen-xxs !default;
+$screen-phone: $screen-xxs-min !default;
+
+// Extra small screen / phone
+$screen-xs: 480px !default;
+$screen-xs-min: $screen-xs !default;
+$screen-phone: $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm: 670px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+// Extra large screen / wide desktop
+$screen-xl: 1400px !default;
+$screen-xl-min: $screen-xl !default;
+$screen-xl-desktop: $screen-xl-min !default;
+
+// Extra Extra large screen / wide desktop
+$screen-xxl: 1700px !default;
+$screen-xxl-min: $screen-xxl !default;
+$screen-xxl-desktop: $screen-xxl-min !default;
+
+// Extra Extra Extra large screen / wide desktop
+$screen-xxxl: 2000px !default;
+$screen-xxxl-min: $screen-xxxl !default;
+$screen-xxxl-desktop: $screen-xxxl-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-xs-min - 1) !default;
+$screen-sm-max: ($screen-sm-min - 1) !default;
+$screen-md-max: ($screen-md-min - 1) !default;
+
+$screen-lg-max: ($screen-lg-min - 1) !default;
+$screen-xl-max: ($screen-xl-min - 1) !default;
+$screen-xxl-max: ($screen-xxl-min - 1) !default;
+$screen-xxxl-max: ($screen-xxxl-min - 1) !default;
+
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint==xxs {
+    @media (max-width: $screen-xxs) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xs {
+    @media (max-width: $screen-xs-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==sm {
+    @media (max-width: $screen-sm-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==md {
+    @media (max-width: $screen-md-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+    @media (max-width: $screen-lg-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+    @media (max-width: $screen-xl-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xxl {
+    @media (max-width: $screen-xxl-max) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xxxl {
+    @media (max-width: $screen-xxxl-max) {
+      @content;
+    }
+  }
+
+
+}

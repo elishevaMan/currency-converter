@@ -1,0 +1,96 @@
+@import "../../common/styles/breakpoints.module";
+
+
+.first-row
+{
+width: 60%;
+@extend .rows-class;
+@include responsive("lg") {
+    width: 70%;
+  }
+ 
+  @include responsive("sm") {
+    width: 100%;
+  }
+}
+.title-converter
+{
+    text-align: center;
+    color: #CFA53D;
+    font-weight: 800;
+
+}
+.second-row
+{
+    width: fit-content;
+    color: #CFA53D;
+    font-weight: 900;
+    font-size: 18px;
+    justify-content: space-around;
+    width: 30%;
+    @extend .rows-class;
+    @include responsive("sm") {
+        width: 50%;
+      }
+      @include responsive("xs") {
+        width: 70%;
+      }
+    
+
+}
+.rows-class
+{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.container-converter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    margin-top: 10%;
+}
+.currency_img
+{
+   width: 10%;
+   margin: auto;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   @include responsive("sm") {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 15%;
+
+   }
+}
+.amount-input
+{
+    width: 30%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    @include responsive("sm") {
+        width: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+      }
+
+}
+
+
+.currency-type-input
+{
+    margin-right: 10%;
+    margin-left: 10%;
+
+    width: 50%;
+    @include responsive("sm") {
+        width: 80%;
+    margin-right: 5%;
+    margin-left: 5%;
+      }
+}
+
+
